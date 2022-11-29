@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import {BsFillBagCheckFill, BsBagFill } from "react-icons/bs";
 import {MdAccountCircle } from "react-icons/md";
 import { AiFillCloseCircle, AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
