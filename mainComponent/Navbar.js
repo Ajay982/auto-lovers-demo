@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import {BsFillBagCheckFill, BsBagFill } from "react-icons/bs";
 import {MdAccountCircle } from "react-icons/md";
 import { AiFillCloseCircle, AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import Button from "./subComponents/Button";
 
 const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
   // console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
@@ -21,7 +22,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
   const ref = useRef()
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-md sticky top-0 bg-white z-10">
+    <div className="flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-md sticky top-0 bg-white overflow-x-clip z-10">
       <div className="logo mx-5 w-28 shadow-transparent h-4">
         <Link href="/" legacyBehavior>
           <a><img src="https://www.linkpicture.com/q/Auto-Lovers-Logo_1.jpg" alt="" /></a></Link>
@@ -29,7 +30,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
       <div className="nav">
         <ul className="flex items-center space-x-2 font-bold md:text-xl py-2">
           <li>
-            <Link href="/Lifter">Lifter</Link>
+            <Link href="/Lifter"><Button /></Link>
           </li>
           <li>
             <Link href="/Sticker">Sticker</Link>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import '../styles/globals.css'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import Navbar from '../mainComponent/Navbar'
+import Footer from '../mainComponent/Footer'
+import SideNavbar from '../mainComponent/SideNavbar'
 
 
 
@@ -64,11 +65,11 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-  <>
+  < >
     <Navbar key={subTotal} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}
-clearCart={clearCart} subTotal={subTotal} />
+clearCart={clearCart} subTotal={subTotal}  />
 
-
+  {/* <SideNavbar /> */}
   <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}
 clearCart={clearCart} subTotal={subTotal} {...pageProps} />
   <Footer />
